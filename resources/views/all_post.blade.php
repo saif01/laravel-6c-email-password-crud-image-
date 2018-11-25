@@ -1,0 +1,37 @@
+@extends('layouts.app')
+@section('content')
+
+<div class="container">
+	<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Author</th>
+      <th scope="col">Tags</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  	@foreach($post as $row)
+    <tr>
+      <th scope="row">{{$row->id }}</th>
+      <td>{{$row->title }}</td>
+      <td>{{$row->author }}</td>
+      <td>{{$row->tag }}</td>
+      <td>
+      	<a href="" class="btn btn-sm btn-danger" >Delete</a>
+      	<a href="" class="btn btn-sm btn-info" >View</a>
+      	<a href="" class="btn btn-sm btn-success" >Edit</a>
+      </td>
+    </tr>
+    @endforeach
+  </tbody>
+</table>
+
+
+
+</div>
+
+
+@endsection
